@@ -1,4 +1,5 @@
-import { Component } from '@angular/core';
+import { Component, Input } from '@angular/core';
+import { HouseInterface } from '../house-interface'; 
 
 @Component({
   selector: 'app-housing-location',
@@ -8,5 +9,5 @@ import { Component } from '@angular/core';
   styleUrl: './housing-location.component.css'
 })
 export class HousingLocationComponent {
-
+  @Input() housingLocation!:HouseInterface
 }
