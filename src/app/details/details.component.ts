@@ -1,6 +1,8 @@
 import { Component, inject } from '@angular/core';
 import { CommonModule } from '@angular/common';
 import { ActivatedRoute } from '@angular/router';
+import { HousingService } from '../housing.service';
+import { HouseInterface } from '../house-interface';
 @Component({
   selector: 'app-details',
   standalone: true,
@@ -10,9 +12,12 @@ import { ActivatedRoute } from '@angular/router';
 })
 export class DetailsComponent {
   route: ActivatedRoute = inject(ActivatedRoute);
-  housingLocationId = 0;
+  housingService = inject(HousingService);
+  housingLocation: HouseInterface | undefined;
 
   constructor() {
-    this.housingLocationId = Number(this.route.snapshot.params['id']);
+    const housingLocationId = Number(this.route.snapshot.params['id']);
+    this.housingLocation =
+      this.housingService.gethousingLocationById(housingLocationId);
   }
 }
