@@ -71,3 +71,35 @@
       height: 400px;
     }
   }
+
+  button.primary:hover  {
+    cursor: pointer;
+  }
+
+  .back-to-home {
+    margin-bottom: 20px;
+    align-items: center;
+  }
+  .back-to-home > a {
+    color: var(--secondary-color);
+    font-size: 12pt;
+    font-weight: bold;
+    text-decoration: none;
+    
+  }
+
+  .back-to-home > a:hover {
+    color: var(--tertiary-color);
+    cursor: pointer;
+  }
+
+  .anchor-text {
+    display: inline-block;
+    vertical-align:middle;
+  }
+
+  #arrow_back  {
+    font-size: 24px;
+    margin-right: 5px;
+    vertical-align:middle;
+  }

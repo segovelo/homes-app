@@ -1,4 +1,10 @@
 <article>
+    <section class="back-to-home">
+        
+        <a [routerLink]="['/home']">
+            <i id="arrow_back" class="material-icons">arrow_back</i>
+            <p class="anchor-text">Back to search results</p></a>
+    </section>
     <img class="listing-photo" [src]="housingLocation?.photo"/>
     <section class="listing-description">
         <h2 class="listing-heading">

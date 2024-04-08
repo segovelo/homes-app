@@ -28,7 +28,6 @@ export class HomeComponent {
         else this.filteredLocationList = this.housingLocationList.filter(
                   housingLocation => housingLocation?.city.toLowerCase()
                       .includes(text.trim().toLowerCase())
-
       );
     }
   }

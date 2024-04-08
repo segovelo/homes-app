@@ -1,5 +1,6 @@
-import { Component, Input } from '@angular/core';
-import { HouseInterface } from '../house-interface'; 
+import { Component, Input, inject } from '@angular/core';
+import { HouseInterface } from '../house-interface';
+import { ActivatedRoute } from '@angular/router'; 
 import {RouterModule}  from '@angular/router'; 
 import { CommonModule } from '@angular/common';
 
@@ -11,5 +12,6 @@ import { CommonModule } from '@angular/common';
   styleUrl: './housing-location.component.css'
 })
 export class HousingLocationComponent {
+  route: ActivatedRoute = inject(ActivatedRoute);
   @Input() housingLocation!:HouseInterface
 }
